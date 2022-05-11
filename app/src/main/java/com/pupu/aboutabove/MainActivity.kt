@@ -16,6 +16,6 @@ class MainActivity : AppCompatActivity() {
         mBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        randomTheme.aboveScript(this, binding.textViewMainScript)
+        randomTheme.aboveScript(this, binding.textViewMainScript, binding.imageViewMainMember)
     }
 }
