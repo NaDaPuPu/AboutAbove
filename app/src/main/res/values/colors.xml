@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- 록리 컬러 -->
+    <color name="rockLeePrimaryColor">#04a10f</color>
+    <color name="rockLeePrimaryLightColor">#56d348</color>
+    <color name="rockLeePrimaryDarkColor">#007100</color>
+    <color name="rockLeePrimaryTextColor">#000000</color>
+
+    <!-- 프프 컬러 -->
+    <color name="puPuPrimaryColor">#373d53</color>
+    <color name="puPuPrimaryLightColor">#62677f</color>
+    <color name="puPuPrimaryDarkColor">#10172a</color>
+    <color name="puPuPrimaryTextColor">#ffffff</color>
+
+    <!-- 백훈 컬러 -->
+    <color name="baekPrimaryColor">#ffffff</color>
+    <color name="baekPrimaryLightColor">#ffffff</color>
+    <color name="baekPrimaryDarkColor">#cccccc</color>
+    <color name="baekPrimaryTextColor">#000000</color>
+
+    <!-- 루도 컬러 -->
+    <color name="ludoPrimaryColor">#ffd700</color>
+    <color name="ludoPrimaryLightColor">#ffff52</color>
+    <color name="ludoPrimaryDarkColor">#c7a600</color>
+    <color name="ludoPrimaryTextColor">#000000</color>
+
+    <!-- 비경 컬러 -->
+    <color name="beePrimaryColor">#000000</color>
+    <color name="beePrimaryLightColor">#2c2c2c</color>
+    <color name="beePrimaryDarkColor">#000000</color>
+    <color name="beePrimaryTextColor">#ffffff</color>
+
+    <!-- 라온 컬러 -->
+    <color name="raonPrimaryColor">#a687ee</color>
+    <color name="raonPrimaryLightColor">#d9b7ff</color>
+    <color name="raonPrimaryDarkColor">#745abb</color>
+    <color name="raonPrimaryTextColor">#000000</color>
+</resources>

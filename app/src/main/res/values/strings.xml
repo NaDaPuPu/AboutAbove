@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AboutAbove</string>
+
+    <!--  MainActivity  -->
+    <string name="main_start">시작</string>
+
+</resources>
