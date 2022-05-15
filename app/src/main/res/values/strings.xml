@@ -30,4 +30,8 @@
     <string name="main_ludovico_0">어..절 잘 모르신다구요? 그럴 수 있어요 :(</string>
     <string name="main_ludovico_1">아.</string>
     <string name="main_ludovico_2">어..절 잘 모르신다구요? 그럴 수 있어요 :(</string>
+
+    <!--  Test 스크립트  -->
+    <string name="test_description_left_button">왼쪽</string>
+    <string name="test_description_right_button">오른쪽</string>
 </resources>

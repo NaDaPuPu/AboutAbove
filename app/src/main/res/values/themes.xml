@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.AboutAbove" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.AboutAbove" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -14,7 +14,7 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="Theme.AboutAbove.RockLee" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.AboutAbove.RockLee" parent="Theme.AboutAbove">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/rockLeePrimaryColor</item>
         <item name="colorPrimaryVariant">@color/rockLeePrimaryDarkColor</item>
@@ -24,7 +24,7 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="Theme.AboutAbove.PuPu" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.AboutAbove.PuPu" parent="Theme.AboutAbove">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/puPuPrimaryColor</item>
         <item name="colorPrimaryVariant">@color/puPuPrimaryDarkColor</item>
@@ -34,7 +34,7 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="Theme.AboutAbove.Baekhoon" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.AboutAbove.Baekhoon" parent="Theme.AboutAbove">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/baekPrimaryColor</item>
         <item name="colorPrimaryVariant">@color/baekPrimaryDarkColor</item>
@@ -44,7 +44,7 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="Theme.AboutAbove.Ludovico" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.AboutAbove.Ludovico" parent="Theme.AboutAbove">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/ludoPrimaryColor</item>
         <item name="colorPrimaryVariant">@color/ludoPrimaryDarkColor</item>
@@ -54,7 +54,7 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="Theme.AboutAbove.Beekyung" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.AboutAbove.Beekyung" parent="Theme.AboutAbove">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/beePrimaryColor</item>
         <item name="colorPrimaryVariant">@color/beePrimaryDarkColor</item>
@@ -64,7 +64,7 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="Theme.AboutAbove.Raon" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.AboutAbove.Raon" parent="Theme.AboutAbove">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/raonPrimaryColor</item>
         <item name="colorPrimaryVariant">@color/raonPrimaryDarkColor</item>
