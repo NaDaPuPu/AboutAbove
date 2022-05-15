@@ -7,6 +7,7 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import androidx.viewpager2.widget.ViewPager2
 import com.pupu.aboutabove.databinding.ActivityTestBinding
 
 private const val NUM_PAGES = 10
@@ -41,10 +42,13 @@ class TestActivity : FragmentActivity(), View.OnClickListener {
         when (v) {
             binding.buttonTestBefore -> {
                 Log.d("test", "left")
+                binding.viewPager2Test.setCurrentItem(binding.viewPager2Test.currentItem - 1)
+
             }
 
             binding.buttonTestAfter -> {
                 Log.d("test", "right")
+                binding.viewPager2Test.setCurrentItem(binding.viewPager2Test.currentItem + 1)
             }
         }
     }
@@ -52,6 +56,6 @@ class TestActivity : FragmentActivity(), View.OnClickListener {
     private inner class TestViewPagerAdapter(fa: FragmentActivity) : FragmentStateAdapter(fa) {
         override fun getItemCount(): Int = NUM_PAGES
 
-        override fun createFragment(position: Int): Fragment = TestFragment()
+        override fun createFragment(position: Int): Fragment = TestFragment(position)
     }
 }
