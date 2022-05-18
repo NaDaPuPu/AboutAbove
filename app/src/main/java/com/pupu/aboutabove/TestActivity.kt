@@ -17,6 +17,19 @@ class TestActivity : FragmentActivity(), View.OnClickListener {
     private var mBinding: ActivityTestBinding? = null
     private val binding get() = mBinding!!
 
+    private val question = listOf<Pair<String, String>>(
+        Pair("", ""),
+        Pair("", ""),
+        Pair("", ""),
+        Pair("", ""),
+        Pair("", ""),
+        Pair("", ""),
+        Pair("", ""),
+        Pair("", ""),
+        Pair("", ""),
+        Pair("", "")
+    )
+
     override fun onCreate(savedInstanceState: Bundle?) {
         // View Binding
         super.onCreate(savedInstanceState)

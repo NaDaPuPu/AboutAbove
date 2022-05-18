@@ -34,16 +34,6 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="Theme.AboutAbove.Baekhoon" parent="Theme.AboutAbove">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/baekPrimaryColor</item>
-        <item name="colorPrimaryVariant">@color/baekPrimaryDarkColor</item>
-        <item name="colorOnPrimary">@color/baekPrimaryTextColor</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor" >?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
-    </style>
-
     <style name="Theme.AboutAbove.Ludovico" parent="Theme.AboutAbove">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/ludoPrimaryColor</item>
