@@ -20,7 +20,7 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent">
 
     </androidx.viewpager2.widget.ViewPager2>
 
@@ -31,9 +31,12 @@
         android:layout_height="wrap_content"
         android:contentDescription="@string/test_description_left_button"
         android:padding="15dp"
+        android:visibility="invisible"
         app:icon="@drawable/ic_baseline_chevron_left_24"
         app:iconSize="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonTestAfter"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline4" />
 
@@ -48,6 +51,8 @@
         app:iconSize="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonTestBefore"
         app:layout_constraintTop_toTopOf="@+id/guideline4" />
 
 

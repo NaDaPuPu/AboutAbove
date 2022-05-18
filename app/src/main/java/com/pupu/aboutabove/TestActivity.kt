@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
+import androidx.transition.Visibility
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.pupu.aboutabove.databinding.ActivityTestBinding
@@ -25,6 +26,19 @@ class TestActivity : FragmentActivity(), View.OnClickListener {
         // Pager Adapter
         val pagerAdapter = TestViewPagerAdapter(this)
         binding.viewPager2Test.adapter = pagerAdapter
+        binding.viewPager2Test.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            override fun onPageSelected(pos: Int) {
+                super.onPageSelected(pos)
+                when (pos) {
+                    0 -> binding.buttonTestBefore.visibility = View.INVISIBLE
+                    NUM_PAGES - 1 -> binding.buttonTestAfter.visibility = View.INVISIBLE
+                    else -> {
+                        binding.buttonTestBefore.visibility = View.VISIBLE
+                        binding.buttonTestAfter.visibility = View.VISIBLE
+                    }
+                }
+            }
+        })
 
         // Button
         binding.buttonTestBefore.setOnClickListener(this)
@@ -42,13 +56,13 @@ class TestActivity : FragmentActivity(), View.OnClickListener {
         when (v) {
             binding.buttonTestBefore -> {
                 Log.d("test", "left")
-                binding.viewPager2Test.setCurrentItem(binding.viewPager2Test.currentItem - 1)
+                binding.viewPager2Test.currentItem -= 1
 
             }
 
             binding.buttonTestAfter -> {
                 Log.d("test", "right")
-                binding.viewPager2Test.setCurrentItem(binding.viewPager2Test.currentItem + 1)
+                binding.viewPager2Test.currentItem += 1
             }
         }
     }
