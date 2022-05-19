@@ -30,4 +30,6 @@
     <!--  Test 스크립트  -->
     <string name="test_description_left_button">왼쪽</string>
     <string name="test_description_right_button">오른쪽</string>
+    <string name="test_description_A_button">답변 A</string>
+    <string name="test_description_B_button">답변 B</string>
 </resources>
