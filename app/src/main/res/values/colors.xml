@@ -20,12 +20,6 @@
     <color name="puPuPrimaryDarkColor">#10172a</color>
     <color name="puPuPrimaryTextColor">#ffffff</color>
 
-    <!-- 백훈 컬러 -->
-    <color name="baekPrimaryColor">#ffffff</color>
-    <color name="baekPrimaryLightColor">#ffffff</color>
-    <color name="baekPrimaryDarkColor">#cccccc</color>
-    <color name="baekPrimaryTextColor">#000000</color>
-
     <!-- 루도 컬러 -->
     <color name="ludoPrimaryColor">#ffd700</color>
     <color name="ludoPrimaryLightColor">#ffff52</color>

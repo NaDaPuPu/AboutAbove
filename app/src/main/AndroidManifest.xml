@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AboutAbove">
         <activity
+            android:name=".ResultActivity"
+            android:exported="false" />
+        <activity
             android:name=".TestActivity2"
             android:exported="false" />
         <activity

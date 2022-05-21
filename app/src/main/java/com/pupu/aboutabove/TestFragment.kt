@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.pupu.aboutabove.databinding.FragmentTestBinding
 
-class TestFragment(private val data: Triple<String, String, String>, private val pos: Int) : Fragment() {
+class TestFragment(private val data: Triple<String, String, String>, private val checked: Int?, private val pos: Int) : Fragment() {
     private var mBinding: FragmentTestBinding? = null
     private val binding get() = mBinding!!
     private var checkedIndex: Int = 0
@@ -37,6 +37,11 @@ class TestFragment(private val data: Triple<String, String, String>, private val
         binding.buttonTestA.text = data.second
         binding.buttonTestB.text = data.third
 
+        when (checked) {
+            null -> {}
+            else -> binding.toggleGroupTest.check(checked)
+        }
+
         binding.toggleGroupTest.addOnButtonCheckedListener { _, checkedId, isChecked ->
             checkedIndex = if (!isChecked) -1
             else {
@@ -46,7 +51,6 @@ class TestFragment(private val data: Triple<String, String, String>, private val
                     else -> return@addOnButtonCheckedListener
                 }
             }
-
             mOnSelectEventListener?.onReceivedData(pos, checkedIndex)
         }
 
