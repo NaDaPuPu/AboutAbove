@@ -13,15 +13,15 @@ import com.pupu.aboutabove.databinding.ActivityTestBinding
 
 private const val NUM_PAGES = 10
 
-class TestActivity : FragmentActivity(), View.OnClickListener {
+class TestActivity : FragmentActivity(), View.OnClickListener, TestFragment.OnSelectEventListener {
     private var mBinding: ActivityTestBinding? = null
     private val binding get() = mBinding!!
 
     // 질문, A 지문, B 지문
-    private val question = listOf<Triple<String, String, String>>(
+    private val question = arrayOf<Triple<String, String, String>>(
         Triple("나는 방송을 본다면 매운맛의 방송이 좋다.", "좋아!", "으엑!"),
-        Triple("", "", ""),
-        Triple("", "", ""),
+        Triple("메롱", "우씨 죽을래?", "응~ 무지개 반사~"),
+        Triple("공포게임..좋아하세요..?", "네", "저리 가세요"),
         Triple("", "", ""),
         Triple("", "", ""),
         Triple("", "", ""),
@@ -32,21 +32,22 @@ class TestActivity : FragmentActivity(), View.OnClickListener {
     )
 
     // 선택 지문 A, B에 따라 각각 점수가 달라짐
-    // Pair<(A선택, B선택)>, arrayOf(비경, 프프, 라온, 비경, 록리)
-    private val score = listOf<Pair<Array<Int>, Array<Int>>>(
-        Pair(arrayOf(), arrayOf()),
-        Pair(arrayOf(), arrayOf()),
-        Pair(arrayOf(), arrayOf()),
-        Pair(arrayOf(), arrayOf()),
-        Pair(arrayOf(), arrayOf()),
-        Pair(arrayOf(), arrayOf()),
-        Pair(arrayOf(), arrayOf()),
-        Pair(arrayOf(), arrayOf()),
-        Pair(arrayOf(), arrayOf()),
-        Pair(arrayOf(), arrayOf()),
+    // Pair<(A선택, B선택)>, arrayOf(비경, 프프, 라온, 루도, 록리)
+    private val score = arrayOf<Pair<IntArray, IntArray>>(
+        Pair(intArrayOf(0, 1, 2, 1, 0), intArrayOf(2, 1, 0, 1, 2)), // 매운맛 OX
+        Pair(intArrayOf(), intArrayOf()), // 메롱
+        Pair(intArrayOf(1, 0, 2, 2, 0), intArrayOf(1, 2, 0, 0, 2)),
+        Pair(intArrayOf(), intArrayOf()),
+        Pair(intArrayOf(), intArrayOf()),
+        Pair(intArrayOf(), intArrayOf()),
+        Pair(intArrayOf(), intArrayOf()),
+        Pair(intArrayOf(), intArrayOf()),
+        Pair(intArrayOf(), intArrayOf()),
+        Pair(intArrayOf(), intArrayOf()),
     )
 
-
+    // <포지션 별 선택 여부, >
+    private var result: Array<Pair<Boolean, IntArray>> = Array(NUM_PAGES) { Pair(false, intArrayOf(0, 0, 0, 0, 0)) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         // View Binding
@@ -91,7 +92,6 @@ class TestActivity : FragmentActivity(), View.OnClickListener {
             binding.buttonTestBefore -> {
                 Log.d("test", "left")
                 binding.viewPager2Test.currentItem -= 1
-
             }
 
             binding.buttonTestAfter -> {
@@ -104,6 +104,15 @@ class TestActivity : FragmentActivity(), View.OnClickListener {
     private inner class TestViewPagerAdapter(fa: FragmentActivity) : FragmentStateAdapter(fa) {
         override fun getItemCount(): Int = NUM_PAGES
 
-        override fun createFragment(position: Int): Fragment = TestFragment(question.get(position))
+        override fun createFragment(pos: Int): Fragment = TestFragment(question.get(pos), pos)
+    }
+
+    override fun onReceivedData(pos: Int, selected: Int) {
+        when (selected) {
+            -1 -> result[pos] = Pair(false, intArrayOf(0, 0, 0, 0, 0))
+            else -> result[pos] = Pair(true, score[pos].toList()[selected])
+        }
+        Log.d("MainActivity", "Position : $pos Selected : $selected")
+        Log.d("MainActivity", "Result: ${result[pos].first}, ${result[pos].second}")
     }
 }
